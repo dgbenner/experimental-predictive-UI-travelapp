@@ -250,9 +250,12 @@ Primary map view + multimodal additions:
 - Panel 6: Crosswalk safety reminder
 
 The UI may also enter a fan-out state if unsure whether user wants:
+– Wait times at the Tower of London, and peak days
+– Suggested days and times with lower crowd attendance, better values
 - Navigation
 - Ticket purchase
 - or Audio guide
+- Weather alert to suggest transportation mode (walk to dinner becomes cab)
 
 ---
 
