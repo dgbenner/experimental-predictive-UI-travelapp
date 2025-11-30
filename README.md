@@ -52,7 +52,8 @@ The UI can fluidly shift between:
 - 1-panel predictive  
 - 2–6 panel multimodal arrangements  
 - portrait-oriented side panels  
-- fan-out predictive breakdowns  
+- fan-out predictive breakdowns
+- scrollable or expandable menu options, again predictively loaded for highest interaction potential
 
 These layouts are not fixed; they're states the system can enter when needed.
 
@@ -69,13 +70,13 @@ This mirrors the reality of travel: distracted, carrying luggage, eyes-up, navig
 
 ### Eyes-Up, Motion-Aware Design
 The system must remain operable:
-- one-handed
+- one-handed, or no-touch
 - while walking
 - in crowds
 - while pulling luggage
 - while attention shifts constantly between environment and phone
 
-The UI assumes the user is busy, overloaded, and intermittently inattentive, and adapts accordingly.
+The UI assumes the user is busy, overloaded, hands-full, and intermittently inattentive, and adapts accordingly.
 
 ---
 
@@ -95,7 +96,7 @@ shake ↓ = dismiss | sway forward ↑ = accept
 
 ### Voice
 - Lightweight, situational voice triggers (“Show map”, “Open hotel key”)
-- Optional fallback for accessibility
+- Optional fallback for accessibility, hands-free
 
 ### Haptics
 - Turn cues
@@ -105,10 +106,10 @@ shake ↓ = dismiss | sway forward ↑ = accept
 ### Audio Cues
 - Minimal beeps
 - Subtle directional hints
-- Cross-traffic reminders
+- Cross-traffic reminders ('look right' (UK) vs 'look left' (US))
 
 ### Facial / Head Gestures (Experimental)
-Inspired by new OS-level accessibility features:
+Inspired by new Tahoe / modern Mac OS-level accessibility features (existing, and modifiable):
 - Mouth-open → Accept
 - Head-turn left/right → Switch panel
 - Blink-based triggers (optional future experiment, may be too sensitive)
@@ -330,4 +331,3 @@ This prototype is intended to explore:
 This document is an experimental exploration of multimodal, predictive, touch-optional travel UI design.
 Artwork, maps, and screen mock-ups can be added later as needed.
 
-If you’d like a visual storyboard, Figma frames, demo flow, or prototype, just ask.
