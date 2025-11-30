@@ -334,6 +334,14 @@ This prototype is intended to explore:
 This document is an experimental exploration of multimodal, predictive, touch-optional travel UI design.
 Artwork, maps, and screen mock-ups can be added later as needed.
 
+## 11.0 Ideas Around Deployment
+
+City chamber of commerce
+Trip-Advisor-like apps
+
+Working titles: Wanderlust Featured Destinations / Cities
+
+
 ## 11.1 "Manifesto thinking"
 Why are we still forcing users to read "Walls of Text"?
 
