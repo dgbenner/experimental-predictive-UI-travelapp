@@ -333,14 +333,19 @@ Artwork, maps, and screen mock-ups can be added later as needed.
 
 ## 11.1 "Manifesto thinking"
 Why are we still forcing users to read "Walls of Text"?
+
 We interact with LLMs mostly through chat bubbles, but sometimes a chat bubble is the wrong Ul for the job. If I'm planning a trip, I don't want a text paragraph; I want an interactive map.
+
 I've been experimenting with Adaptive Ul (or Generative Ul, Liquid Content, Sentient Desgn - so many names are popping up for this concept) systems to solve this. In this short demo, the Al isn't just generating text. It's analyzing the user's intent ("Planning," "Exploring," "Comparing") and deciding which React component to render on the fly.
+
 Instead of a designer pre-defining the hard-coded flows, the Al orchestrates the interface based on the conversation context. But what are the ux challenges here? It looks fluid at first, but as I built this, I found it opens a Pandora's Box of product questions:
+
 1 - Intent Misalignment: What happens if the Al picks a Map when the user actually wanted a List? How system will decide if there is ambiguity and misalignment?
+
 2- State Management: How do we sync Ul interactions (like dragging an item in the itinerary back to the LLM's memory? The Ul elements can be more interesting if we are going to embed preferences to LLM's or system memory.
+
 3- Cognitive Load: Does a "shapeshifting" interface confuse the user if the layout changes too often?
-I see very strong design direction from my lenses and I expect to see more solutions in 2026. Even, we can argue that it is already here... Will we move from
-"Static Design Systems" to "Just-in-Time Interfaces?" 
+I see very strong design direction from my lenses and I expect to see more solutions in 2026. Even, we can argue that it is already here... Will we move from "Static Design Systems" to "Just-in-Time Interfaces?" 
 
 What are the biggest risks you see?
 
