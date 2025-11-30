@@ -1,4 +1,4 @@
-# Experimental Multimodal Travel UI (London Prototype)
+# Experimental Multimodal Travel UI (West End, London UK Prototype)
 *Exploring predictive UI, multimodal layouts, and touch-optional interactions for on-the-go travelers.*
 
 ---
