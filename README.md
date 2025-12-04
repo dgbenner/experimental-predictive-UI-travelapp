@@ -19,6 +19,60 @@ This document outlines the philosophy, interaction models, and UI modes used thr
 
 ---
 
+## 1.1 Intentional Scope Constraints ("On Rails" Design)
+
+This prototype deliberately operates within a defined "playground" of interactions—similar to how modern arcade games use "on rails" experiences. This is not a limitation of the concept, but rather a focused design decision that serves multiple purposes:
+
+### Why Constrained Scope?
+
+**Experience-Specific Optimization**
+The multimodal UI patterns work best when optimized for specific, high-frequency travel scenarios. Trying to make the system work for every possible use case (tax advice, dry cleaning, spontaneous needs) would dilute the experimental focus and prevent deep exploration of how predictive UI performs in the scenarios that matter most to travelers.
+
+**Interaction Method Validation**
+Motion-based controls, haptic feedback, and eyes-up navigation require careful calibration for specific contexts. A system designed for "everything" would struggle to deliver the right haptic pattern, audio cue, or panel layout at the right moment. By focusing on travel scenarios, each interaction can be refined for that specific moment of need.
+
+**High-Value, High-Frequency Use Cases**
+The system targets activities where travelers spend the most time and cognitive energy:
+- **Navigation & Transportation**: Getting from point A to B, transfers, walking directions
+- **Dining & Reservations**: Restaurant bookings, table timing, menu preview
+- **Tourist Attractions**: Tickets, wait times, audio guides, crowd predictions
+- **Accommodation**: Check-in, room access, hotel services
+- **Shopping**: AR previews, saved items, store locations
+- **Safety**: Crosswalks, traffic patterns, crowd density
+
+These represent the moments when traditional mobile UI breaks down—when users are distracted, hands-full, carrying luggage, navigating crowds, or need eyes-up awareness.
+
+### What's Outside the Rails?
+
+Intentionally excluded scenarios:
+- Professional services (haircuts, tax advice, medical appointments)
+- Daily errands (dry cleaning, banking, postal services)
+- Extended research or planning (better suited for traditional search)
+- Highly personalized or niche activities without clear interaction patterns
+- Services that require deep menus and lengthy forms
+
+These activities either:
+1. Don't benefit meaningfully from predictive multimodal UI
+2. Happen too infrequently to justify interaction optimization
+3. Require more deliberate research than on-the-go decisions
+4. Work fine with traditional app patterns
+
+### The "Playground" Metaphor
+
+Think of this as a curated experience environment:
+- **Defined boundaries** create space for deeper exploration
+- **Known scenarios** enable better prediction algorithms
+- **Consistent patterns** allow users to build muscle memory with gestures
+- **Focused scope** prevents feature creep and maintains experimental clarity
+
+Just as an on-rails arcade game creates a more polished experience by controlling the environment, this travel-focused scope allows the multimodal UI to shine in the contexts where it provides the most value.
+
+### Future Expansion
+
+Additional "rails" could be developed for other domains (commuting, fitness, events), but each would require its own optimized interaction patterns and predictive models. The goal is depth over breadth—proving the concept works exceptionally well in travel before attempting to generalize.
+
+---
+
 ## 2. Journey Scope (Hardcoded London Example)
 
 The scripted sequence:
@@ -95,7 +149,7 @@ shake ↓ = dismiss | sway forward ↑ = accept
 ```
 
 ### Voice
-- Lightweight, situational voice triggers (“Show map”, “Open hotel key”)
+- Lightweight, situational voice triggers ("Show map", "Open hotel key")
 - Optional fallback for accessibility, hands-free
 
 ### Haptics
@@ -215,7 +269,7 @@ before reaching the hotel.
 ### B. Tube Ride → Hotel (Safety-Predictive Mix)
 
 As user approaches Tower Hill:
-- Safety cues trigger (“Traffic approaches from the right”)
+- Safety cues trigger ("Traffic approaches from the right")
 - Tube ETA updates
 - Portrait panels show:
   - Panel 4: Tower of London factoid
@@ -246,12 +300,12 @@ User can:
 ### D. Walkway → Tower Bridge Drink
 
 Primary map view + multimodal additions:
-- Panel 4: “Your table by Tower Bridge is ready in 20 minutes”
+- Panel 4: "Your table by Tower Bridge is ready in 20 minutes"
 - Panel 6: Crosswalk safety reminder
 
 The UI may also enter a fan-out state if unsure whether user wants:
-– Wait times at the Tower of London, and peak days
-– Suggested days and times with lower crowd attendance, better values
+- Wait times at the Tower of London, and peak days
+- Suggested days and times with lower crowd attendance, better values
 - Navigation
 - Ticket purchase
 - or Audio guide
@@ -276,7 +330,7 @@ Reinforces multimodal interplay between:
 ### F. Walkie-Talkie Dinner
 
 UI simplifies:
-- Predictive confirmation (“Your booking and pre-order are ready”)
+- Predictive confirmation ("Your booking and pre-order are ready")
 - Minimal distractions
 - Focus mode
 - Motion/voice optional
@@ -290,7 +344,7 @@ A core capability:
 - Haptics for turns
 - Subtle chimes at crossings
 - Direction-of-traffic alerts for UK roads
-- “Eyes-up” design: brief UI flashes, not persistent demands
+- "Eyes-up" design: brief UI flashes, not persistent demands
 - Minimizing visual dependency
 
 ---
@@ -302,7 +356,7 @@ This prototype is intended to explore:
 - Fallback strategies when prediction is wrong
 - User comfort in multimodal and high-distraction contexts
 - Ergonomic feasibility of sway, shake, and facial gestures
-- The effectiveness of large, simple, “control module” UI design
+- The effectiveness of large, simple, "control module" UI design
 - How many unique UI types can be presented without overwhelming users
 
 ---
@@ -341,22 +395,21 @@ Trip-Advisor-like apps
 
 Working titles: Wanderlust Featured Destinations / Cities
 
-
 ## 11.1 "Manifesto thinking"
 Why are we still forcing users to read "Walls of Text"?
 
-We interact with LLMs mostly through chat bubbles, but sometimes a chat bubble is the wrong Ul for the job. If I'm planning a trip, I don't want a text paragraph; I want an interactive map.
+We interact with LLMs mostly through chat bubbles, but sometimes a chat bubble is the wrong UI for the job. If I'm planning a trip, I don't want a text paragraph; I want an interactive map.
 
-I've been experimenting with Adaptive Ul (or Generative Ul, Liquid Content, Sentient Desgn - so many names are popping up for this concept) systems to solve this. In this short demo, the Al isn't just generating text. It's analyzing the user's intent ("Planning," "Exploring," "Comparing") and deciding which React component to render on the fly.
+I've been experimenting with Adaptive UI (or Generative UI, Liquid Content, Sentient Design - so many names are popping up for this concept) systems to solve this. In this short demo, the AI isn't just generating text. It's analyzing the user's intent ("Planning," "Exploring," "Comparing") and deciding which React component to render on the fly.
 
-Instead of a designer pre-defining the hard-coded flows, the Al orchestrates the interface based on the conversation context. But what are the ux challenges here? It looks fluid at first, but as I built this, I found it opens a Pandora's Box of product questions:
+Instead of a designer pre-defining the hard-coded flows, the AI orchestrates the interface based on the conversation context. But what are the UX challenges here? It looks fluid at first, but as I built this, I found it opens a Pandora's Box of product questions:
 
-1 - Intent Misalignment: What happens if the Al picks a Map when the user actually wanted a List? How system will decide if there is ambiguity and misalignment?
+1 - Intent Misalignment: What happens if the AI picks a Map when the user actually wanted a List? How system will decide if there is ambiguity and misalignment?
 
-2- State Management: How do we sync Ul interactions (like dragging an item in the itinerary back to the LLM's memory? The Ul elements can be more interesting if we are going to embed preferences to LLM's or system memory.
+2- State Management: How do we sync UI interactions (like dragging an item in the itinerary) back to the LLM's memory? The UI elements can be more interesting if we are going to embed preferences to LLM's or system memory.
 
 3- Cognitive Load: Does a "shapeshifting" interface confuse the user if the layout changes too often?
+
 I see very strong design direction from my lenses and I expect to see more solutions in 2026. Even, we can argue that it is already here... Will we move from "Static Design Systems" to "Just-in-Time Interfaces?" 
 
 What are the biggest risks you see?
-
